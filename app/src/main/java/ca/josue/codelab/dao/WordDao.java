@@ -1,5 +1,6 @@
 package ca.josue.codelab.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
@@ -23,7 +24,7 @@ public interface WordDao {
 
     // Obtenir tous les mots classés par ordre alphabétique
     @Query("SELECT * FROM word_table ORDER BY word ASC")
-    List<Word> getAlphabetizedWords();
+    LiveData<List<Word>> getAlphabetizedWords();
 
     @Query("DELETE FROM word_table")
     void deleteAll();
