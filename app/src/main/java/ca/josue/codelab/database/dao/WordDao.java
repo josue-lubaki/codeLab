@@ -1,4 +1,4 @@
-package ca.josue.codelab.dao;
+package ca.josue.codelab.database.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
