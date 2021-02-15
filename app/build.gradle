@@ -37,6 +37,7 @@ dependencies {
 
     // Room components
     implementation "androidx.room:room-runtime:2.2.6"
+    implementation 'androidx.wear:wear:1.1.0'
     annotationProcessor "androidx.room:room-compiler:2.2.6"
     androidTestImplementation "androidx.room:room-testing:2.2.6"
 
@@ -56,4 +57,5 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     androidTestImplementation "androidx.test.ext:junit:1.1.2"
+    compileOnly 'com.google.android.wearable:wearable:2.8.1'
 }
