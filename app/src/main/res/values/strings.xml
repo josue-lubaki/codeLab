@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">codeLab</string>
+    <string name="add_word">Add</string>
 </resources>
