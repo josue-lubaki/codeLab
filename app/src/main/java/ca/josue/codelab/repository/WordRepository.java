@@ -44,16 +44,12 @@ public class WordRepository {
             nous utilisons donc le que ExecutorService dont nous avons créé dans le WordRoomDatabase
             pour effectuer l'insertion sur un thread d'arrière-plan.
     */
-    void insert(Word word){
-        WordRoomDatabase.databaseWriteExecutor.execute(()->{
-            mWordDao.insert(word);
-        });
+    public void insert(Word word){
+        WordRoomDatabase.databaseWriteExecutor.execute(()-> mWordDao.insert(word));
     }
 
-    void delete(){
-        WordRoomDatabase.databaseWriteExecutor.execute(()->{
-            mWordDao.deleteAll();
-        });
+    public void delete(){
+        WordRoomDatabase.databaseWriteExecutor.execute(()-> mWordDao.deleteAll());
     }
 
 }
