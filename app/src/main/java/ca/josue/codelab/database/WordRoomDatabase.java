@@ -24,9 +24,9 @@ public abstract class WordRoomDatabase extends RoomDatabase {
         Nous avons créé un ExecutorService avec un pool de threads fixe que vous utiliserez
         pour exécuter des opérations de base de données de manière asynchrone sur un thread d'arrière-plan.
     */
-    static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
+    public static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
-    static WordRoomDatabase getDatabase(final Context context){
+    public static WordRoomDatabase getDatabase(Context context){
         if(INSTANCE == null){
             synchronized (WordRoomDatabase.class){
                 if(INSTANCE == null){
